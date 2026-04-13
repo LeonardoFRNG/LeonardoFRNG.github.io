@@ -5,7 +5,7 @@
 }
 
 :root{
-    --color-fondo: #000000;
+    --color-fondo: #000116e3;
     --color-fondo-secundario: #1a1a1a;
     --color-acento-principal: #e8c547;
     --color-texto-principal: #f0f0f0;
@@ -126,7 +126,7 @@ nav{
 .projects-grid li{
     background-color: var(--color-fondo);
     padding: 1.5rem;
-    border-radius: 8px;
+    border-radius: 1em;
     border: 1px solid var(--color-acento-principal);
     text-align: center;
 }
@@ -136,13 +136,13 @@ nav{
 }
 
 #about-me {
-    font-family: 'Inter', sans-serif;   /* ← faltaba la coma */
+    font-family: 'Inter', sans-serif;   
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 60px;                    /* ← tenías "60 px" con espacio, eso lo rompe */
-    position: relative;                 /* ← faltaba esto para los destellos */
-    overflow: hidden;                   /* ← faltaba esto para los destellos */
+    padding: 0 60px;                    
+    position: relative;                 
+    overflow: hidden;                   
 }
 
 .sobre-mi__inner {
@@ -150,13 +150,24 @@ nav{
     justify-content: space-between;
     gap: 40px;
     width: 100%;
-    align-items: center;                /* ← cambia flex-start por center */
+    align-items: center;               
 }
 
 .sobre-mi-drch {
     flex: 1;
 }
 
+.sobre-mi-drch img {
+    height: 25rem;
+    width: 25rem;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    top: -25px;
+    left: 80px;
+    border: solid;
+    border: color(srgb red green blue);
+}
 .sobre-mi-izq {
     flex: 1;
     display: flex;
@@ -203,7 +214,7 @@ nav{
     pointer-events: none;
 }
 
-/* Destello naranja arriba a la derecha */
+
 #about-me::after {
     content: '';
     position: absolute;
@@ -213,4 +224,56 @@ nav{
     height: 350px;
     background: radial-gradient(circle, rgba(180, 80, 40, 0.5), transparent 70%);
     pointer-events: none;
+}
+
+.projects-grid a {
+    text-decoration: none;
+    color:#818181
+    
+}
+
+.mascotas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+#mensaje {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-acento-principal);
+    border-radius: 4px;
+    color: var(--color-texto-principal)
+}
+
+.nombre {
+    color: var(--color-texto-principal);
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo-texto {
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nombre {
+    overflow: hidden;
+    border-right: 4px solid #ffffff;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 5s steps(30, start), blink 0.7s step-start infinite;
+}
+
+@keyframes typing {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+@keyframes blink {
+    50% {border-color: transparent;}
 }

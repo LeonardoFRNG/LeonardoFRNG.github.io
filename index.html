@@ -6,21 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeonardoFRNG</title>
     <link rel="stylesheet" href="./src/css/styles.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=DM+Serif+Display:ital@0;1&family=Doto:wght@100..900&family=DynaPuff:wght@400..700&family=Instrument+Serif:ital@0;1&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Petit+Formal+Script&family=Shadows+Into+Light+Two&family=Story+Script&family=Tiny5&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1>LD</h1>
+        <h1 class="logo-texto">LJ</h1>
         <nav>
-            <a href="#about-me">About me</a>
-            <a href="#proyects">Proyects</a>
-            <a href="#contact">Contact</a>
-            <a href="./src/views/pets.html">Pets</a>
+            <a href="#about-me" class="tag">About me</a>
+            <a href="#proyects" class="tag">Proyects</a>
+            <a href="#contact" class="tag">Contact</a>
+            <a href="./src/views/pets.html" class="tag">Pets</a>
         </nav>
     </header>
 
     <main>
+        <section id="about-me">
+            <div class="sobre-mi__inner">
+                <div class="sobre-mi-izq">
+                    <h2 class="sobre-mi-titulo">Hello, World! I'm <br><strong class="nombre">Leonardo Jimenez Dager</strong></h2>
+                    <p class="sobre-mi-text">A Software developer and designer of great ideas, improving everyday!.</p>
+                </div>
+
+                <div class="sobre-mi-drch">
+                    <img src="./public/img/luffy.avif" alt="">
+                </div>
+        </section>
         <section id="about-me">
             <div class="sobre-mi__inner">
                 <div class="sobre-mi-izq">
@@ -29,47 +42,68 @@
                         Software development. I'm
                         passionate about learning full stack software development, new technologies, and robotics. I
                         work with: <strong>
-                            HTML, CSS and JavasCript.
-                        </strong></p>
+                            HTML, CSS and JavasCript. lore
+                        </strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni repellat atque eaque at
+                        modi itaque expedita veniam velit ratione ab nihil quidem eligendi voluptates deleniti culpa,
+                        distinctio impedit? Eveniet, harum! lore</p>
                 </div>
 
                 <div class="sobre-mi-drch">
                     <span class="tag">HTML5</span>
                     <span class="tag">CSS3</span>
                     <span class="tag">JavaScript</span>
-                    <span class="tag">Git</span>
+                    <span class="tag">Python</span>
                     <span class="tag">Python</span>
                 </div>
         </section>
         <section id="proyects">
-            <h2>Proyects</h2>
-            <ul class="projects-grid">
-                <li>
-                    <a href="#">Weather App</a>
-                </li>
-                <li>
-                    <a href="#">Calculator</a>
-                </li>
-                <li>
-                    <a href="#">Portfolio</a>
-                </li>
-            </ul>
+            <div class="proyectos-grid">
+                <h2>Proyects</h2>
+                <ul class="projects-grid">
+                    <div>
+                        <li>
+                            <a href="#"><img src="./public/img/weather.jpeg" alt=""><br>Weather App</a>
+                            <p>A simple weather application that displays current weather conditions and forecasts.</p>
+                        </li>
+                    </div>
+                    <li>
+                        <a href="#"><img src="./public/img/calculator.png" alt=""><br>Calculator</a>
+                        <p>A basic calculator with addition, subtraction, multiplication, and division operations.</p>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./public/img/portfolio.jpg" alt=""><br>Portfolio</a>
+                        <p>A personal portfolio website to showcase my projects and skills.</p>
+                    </li>
+                    <div>
+                        <li>
+                            <a href="#"><img src="./public/img/todoapp.webp" alt=""><br>To do App</a>
+                            <p>A simple to-do list application that allows users to add, edit, and delete tasks.</p>
+                        </li>
+                    </div>
+                    <li>
+                        <a href="#"><img src="./public/img/app-security.png" alt=""><br>security App</a>
+                        <p>A simple security application that provides basic protection and monitoring features.</p>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./public/img/btc.png" alt=""><br>Bitcoin App</a>
+                        <p>A simple Bitcoin application that displays current prices and market data.</p>
+                    </li>
+                </ul>
+            </div>
         </section>
         <section id="contact">
             <h2>Contact</h2>
             <form>
                 <input type="text" placeholder="your name">
                 <input type="email" placeholder="your email">
-                <label for="mensaje">Mensaje</label>
-                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame sobre tu proyecto..."
-                    required></textarea>
-                <button type="submit">Send</button>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Your message" required></textarea>
+                <button class="input-mensaje" type="submit">Send</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Leonardo Jimenez Dager</p>
+        <p>© 2026 Leonardo Jimenez Dager</p>
     </footer>
 </body>
 
