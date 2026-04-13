@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <link rel="stylesheet" href="./src/css/styles.css">
 
 </head>
+
 <body>
     <header>
-        <h1>Leonardo Dev</h1>
+        <h1>LD</h1>
         <nav>
             <a href="#about-me">About me</a>
             <a href="#proyects">Proyects</a>
@@ -20,8 +22,24 @@
 
     <main>
         <section id="about-me">
-            <h2>About me</h2>
-            <p>I'm Leo, I'm a coder at riwi and I'm currently learning English and Software development. I'm passionate about learning full stack software development, new technologies, and robotics.</p>
+            <div class="sobre-mi__inner">
+                <div class="sobre-mi-izq">
+                    <h2 class="sobre-mi-titulo">About me</h2>
+                    <p class="sobre-mi-text">Hello! I'm Leo, I'm a coder at riwi and I'm currently learning English and
+                        Software development. I'm
+                        passionate about learning full stack software development, new technologies, and robotics. I
+                        work with: <strong>
+                            HTML, CSS and JavasCript.
+                        </strong></p>
+                </div>
+
+                <div class="sobre-mi-drch">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Git</span>
+                    <span class="tag">Python</span>
+                </div>
         </section>
         <section id="proyects">
             <h2>Proyects</h2>
@@ -42,6 +60,9 @@
             <form>
                 <input type="text" placeholder="your name">
                 <input type="email" placeholder="your email">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntame sobre tu proyecto..."
+                    required></textarea>
                 <button type="submit">Send</button>
             </form>
         </section>
@@ -51,4 +72,5 @@
         <p>© 2025 Leonardo Jimenez Dager</p>
     </footer>
 </body>
+
 </html>

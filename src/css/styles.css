@@ -7,9 +7,12 @@
 :root{
     --color-fondo: #000000;
     --color-fondo-secundario: #1a1a1a;
-    --color-acento-principal: #E76814;
+    --color-acento-principal: #e8c547;
     --color-texto-principal: #f0f0f0;
-    --color-texto-secundario: #a0a0a0;
+    --color-texto-secundario: #000000;
+    --font-display:    'Syne', sans-serif;
+
+
 }
 
 body {
@@ -29,6 +32,8 @@ header {
 
 header h1{
     color: var(--color-acento-principal);
+    font-family: var(--font-display);
+    
 }
 
 nav a {
@@ -128,4 +133,84 @@ nav{
 
 .projects-grid li:hover{
     background-color: var(--color-acento-principal);
+}
+
+#about-me {
+    font-family: 'Inter', sans-serif;   /* ← faltaba la coma */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;                    /* ← tenías "60 px" con espacio, eso lo rompe */
+    position: relative;                 /* ← faltaba esto para los destellos */
+    overflow: hidden;                   /* ← faltaba esto para los destellos */
+}
+
+.sobre-mi__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    align-items: center;                /* ← cambia flex-start por center */
+}
+
+.sobre-mi-drch {
+    flex: 1;
+}
+
+.sobre-mi-izq {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: flex-start;
+}
+
+
+.sobre-mi-titulo {
+    font-size: 48px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.sobre-mi-text {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+
+.sobre-mi-text strong {
+    color: var(--color-acento-principal);
+}
+
+.tag {
+  border: 1px solid #444;
+  color: #ddd;
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 13px;
+}
+
+#about-me::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(80, 60, 180, 0.5), transparent 70%);
+    pointer-events: none;
+}
+
+/* Destello naranja arriba a la derecha */
+#about-me::after {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -80px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(180, 80, 40, 0.5), transparent 70%);
+    pointer-events: none;
 }
