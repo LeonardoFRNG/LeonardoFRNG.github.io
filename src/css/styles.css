@@ -28,6 +28,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    background: rgba(31, 31, 31, 0.8);
 }
 
 header h1{
