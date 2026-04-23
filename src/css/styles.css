@@ -224,7 +224,6 @@ nav{
     pointer-events: none;
 }
 
-
 .projects-grid a {
     text-decoration: none;
     color: #818181;
@@ -347,7 +346,6 @@ nav{
     border-radius: 8px;
     width: 100%;
     max-width: 500px;
-    /* BUG FIX: transform y left eliminados, el formulario queda centrado correctamente */
 }
 
 #contact::before {
@@ -415,13 +413,11 @@ nav{
         padding: 4rem 1.5rem;
     }
 
-    /* Apila texto arriba e imagen abajo en #welcome */
     #welcome .welcome-inner {
         flex-direction: column;
         text-align: center;
     }
 
-    /* La imagen aparece debajo del texto */
     #welcome .sobre-mi-drch {
         order: 2;
         display: flex;
@@ -432,7 +428,6 @@ nav{
         order: 1;
     }
 
-    /* Imagen circular centrada y sin desplazamiento fijo */
     #welcome .sobre-mi-drch img {
         width: 16rem;
         height: 16rem;
@@ -446,8 +441,45 @@ nav{
         left: 0;
     }
 
+    #welcome::before,
+    #welcome::after,
+    #about-me::before,
+    #about-me::after,
+    #contact::before,
+    #contact::after {
+        width: 150px;
+        height: 150px;
+        top: -50px;
+        opacity: 0.3;
+    }
+
+    #welcome::before,
+    #about-me::before,
+    #contact::before { left: -50px; }
+
+    #welcome::after,
+    #about-me::after,
+    #contact::after  { right: -50px; }
+
     .sobre-mi-titulo {
         font-size: 2rem;
+    }
+
+    #about-me .sobre-mi__inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about-me .sobre-mi-drch {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    #about-me .sobre-mi-drch .tag {
+        flex: 0 0 auto;
     }
 }
 
