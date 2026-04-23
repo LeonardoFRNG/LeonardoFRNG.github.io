@@ -10,9 +10,7 @@
     --color-acento-principal: #e8c547;
     --color-texto-principal: #f0f0f0;
     --color-texto-secundario: #000000;
-    --font-display:    'Syne', sans-serif;
-
-
+    --font-display: 'Syne', sans-serif;
 }
 
 body {
@@ -39,7 +37,6 @@ header {
 header h1{
     color: var(--color-acento-principal);
     font-family: var(--font-display);
-    
 }
 
 nav a {
@@ -47,12 +44,10 @@ nav a {
     text-decoration: none;
     transition: color 0.3s ease;
     padding: 5px;
-    
 }
 
 nav a:hover{
     color: var(--color-acento-principal);
-    
 }
 
 main{
@@ -84,8 +79,7 @@ form input{
     background-color: var(--color-fondo);
     border: 1px solid var(--color-acento-principal);
     border-radius: 4px;
-    color: var(--color-texto-principal)
-
+    color: var(--color-texto-principal);
 }
 
 button{
@@ -142,13 +136,13 @@ nav{
 }
 
 #about-me {
-    font-family: 'Inter', sans-serif;   
+    font-family: 'Inter', sans-serif;
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 60px;                    
-    position: relative;                 
-    overflow: hidden;                   
+    padding: 0 60px;
+    position: relative;
+    overflow: hidden;
 }
 
 .sobre-mi__inner {
@@ -156,7 +150,7 @@ nav{
     justify-content: space-between;
     gap: 40px;
     width: 100%;
-    align-items: center;               
+    align-items: center;
 }
 
 .sobre-mi-drch {
@@ -171,9 +165,9 @@ nav{
     position: relative;
     top: -25px;
     left: 80px;
-    border: solid;
-    border: color(srgb red green blue);
+    border: 3px solid var(--color-acento-principal);
 }
+
 .sobre-mi-izq {
     flex: 1;
     display: flex;
@@ -181,7 +175,6 @@ nav{
     gap: 10px;
     align-content: flex-start;
 }
-
 
 .sobre-mi-titulo {
     font-size: 48px;
@@ -202,11 +195,11 @@ nav{
 }
 
 .tag {
-  border: 1px solid #444;
-  color: #ddd;
-  border-radius: 999px;
-  padding: 6px 16px;
-  font-size: 13px;
+    border: 1px solid #444;
+    color: #ddd;
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 13px;
 }
 
 #about-me::before {
@@ -220,7 +213,6 @@ nav{
     pointer-events: none;
 }
 
-
 #about-me::after {
     content: '';
     position: absolute;
@@ -232,10 +224,10 @@ nav{
     pointer-events: none;
 }
 
+
 .projects-grid a {
     text-decoration: none;
-    color:#818181
-    
+    color: #818181;
 }
 
 .mascotas-grid {
@@ -251,7 +243,7 @@ nav{
     background-color: var(--color-fondo);
     border: 1px solid var(--color-acento-principal);
     border-radius: 4px;
-    color: var(--color-texto-principal)
+    color: var(--color-texto-principal);
 }
 
 .logo-texto {
@@ -290,13 +282,13 @@ nav{
 }
 
 #welcome {
-    font-family: 'Inter', sans-serif;   
+    font-family: 'Inter', sans-serif;
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 60px;                    
-    position: relative;                 
-    overflow: hidden; 
+    padding: 0 60px;
+    position: relative;
+    overflow: hidden;
 }
 
 #welcome::before {
@@ -326,19 +318,19 @@ nav{
     justify-content: space-between;
     gap: 40px;
     width: 100%;
-    align-items: center;               
+    align-items: center;
 }
 
 #contact {
-    font-family: 'Inter', sans-serif;   
+    font-family: 'Inter', sans-serif;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 60px;                    
-    position: relative;                 
-    overflow: hidden; 
+    padding: 0 60px;
+    position: relative;
+    overflow: hidden;
 }
 
 #contact h2 {
@@ -355,6 +347,7 @@ nav{
     border-radius: 8px;
     width: 100%;
     max-width: 500px;
+    /* BUG FIX: transform y left eliminados, el formulario queda centrado correctamente */
 }
 
 #contact::before {
@@ -379,24 +372,9 @@ nav{
     pointer-events: none;
 }
 
-#contact form {
-    background-color: var(--color-fondo-secundario);
-    padding: 2rem;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    left: 2%;
-    transform: translateX(-7%);
-}
-
-#contact h2{
-    left: 23rem;
-}
-
 .back-home {
     display: inline-block;
-    margin-top: 1rem;   
+    margin-top: 1rem;
     color: var(--color-texto-principal);
     text-decoration: none;
     border: 1px solid var(--color-acento-principal);
@@ -405,4 +383,110 @@ nav{
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* ===== RESPONSIVE: TABLET ===== */
+@media (max-width: 1024px) {
+    .sobre-mi__inner {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .sobre-mi-drch img {
+        left: 0;
+        width: 18rem;
+        height: 18rem;
+    }
+}
+
+/* ===== RESPONSIVE: MOBILE ===== */
+@media (max-width: 768px) {
+
+    nav {
+        gap: 0.8rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #welcome,
+    #about-me,
+    #contact {
+        height: auto;
+        padding: 4rem 1.5rem;
+    }
+
+    /* Apila texto arriba e imagen abajo en #welcome */
+    #welcome .welcome-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* La imagen aparece debajo del texto */
+    #welcome .sobre-mi-drch {
+        order: 2;
+        display: flex;
+        justify-content: center;
+    }
+
+    #welcome .sobre-mi-izq {
+        order: 1;
+    }
+
+    /* Imagen circular centrada y sin desplazamiento fijo */
+    #welcome .sobre-mi-drch img {
+        width: 16rem;
+        height: 16rem;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+    }
+
+    #contact form {
+        transform: none;
+        left: 0;
+    }
+
+    .sobre-mi-titulo {
+        font-size: 2rem;
+    }
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--color-acento-principal);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+
+    #nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--color-fondo-secundario);
+        padding: 1rem 2rem;
+        gap: 1rem;
+    }
+
+    #nav.open { display: flex; }
+}

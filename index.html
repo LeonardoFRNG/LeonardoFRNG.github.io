@@ -14,45 +14,50 @@
 </head>
 
 <body>
+  
     <header class="inicio">
         <h1 class="logo-texto">LJ</h1>
-        <nav>
+        <nav id="nav">
             <a href="#about-me" class="tag">About me</a>
-            <a href="#proyects" class="tag">Proyects</a>
+            <a href="#proyects" class="tag">Projects</a>
             <a href="#contact" class="tag">Contact</a>
             <a href="./src/views/pets.html" class="tag">Pets</a>
         </nav>
+        <button class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </button>
     </header>
 
     <main>
+
         <section id="welcome">
-            <div class="sobre-mi__inner">
+            <div class="welcome-inner">
                 <div class="sobre-mi-izq">
-                    <h2 class="sobre-mi-titulo">Hello, World! I'm <br>
+                    <h2 class="sobre-mi-titulo">Hello, World! I'm: <br>
                         <strong class="nombre">Leonardo Jimenez Dager</strong>
                     </h2>
-                    <p class="sobre-mi-text">A Software developer and a designer of great ideas, improving everyday!.
-                    </p>
+                    <p class="sobre-mi-text">A Software developer and a designer of great ideas, improving everyday!</p>
                 </div>
-
                 <div class="sobre-mi-drch">
-                    <img src="./public/img/luffy-gear-5-luffy.gif" alt="">
+                    <img src="./public/img/leoselfie.jpeg" alt="Leonardo Jimenez">
                 </div>
+            </div>
         </section>
+
+   
         <section id="about-me">
             <div class="sobre-mi__inner">
                 <div class="sobre-mi-izq">
                     <h2 class="sobre-mi-titulo">About me</h2>
                     <p class="sobre-mi-text">Hello! I'm Leo, I'm a coder at riwi and I'm currently learning English and
-                        Software development. I'm
-                        passionate about learning full stack software development, new technologies, and robotics. I
-                        work with: <strong>
-                            HTML, CSS and JavasCript. lore
-                        </strong>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni repellat atque eaque at
+                        Software development. I'm passionate about learning full stack software development, new
+                        technologies, and robotics. I work with:
+                        <strong>HTML, CSS and JavaScript.</strong>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni repellat atque eaque at
                         modi itaque expedita veniam velit ratione ab nihil quidem eligendi voluptates deleniti culpa,
-                        distinctio impedit? Eveniet, harum! lore</p>
+                        distinctio impedit? Eveniet, harum!
+                    </p>
                 </div>
-
                 <div class="sobre-mi-drch">
                     <span class="tag">HTML5</span>
                     <span class="tag">CSS3</span>
@@ -60,49 +65,49 @@
                     <span class="tag">Python</span>
                     <span class="tag">Git</span>
                 </div>
+            </div>
         </section>
+
         <section id="proyects">
             <div class="proyectos-grid">
-                <h2>Proyects</h2>
+                <h2>Projects</h2>
+             
                 <ul class="projects-grid">
-                    <div>
-                        <li>
-                            <a href="#"><img src="./public/img/weather.jpeg" alt=""><br>Weather App</a>
-                            <p>A simple weather application that displays current weather conditions and forecasts.</p>
-                        </li>
-                    </div>
                     <li>
-                        <a href="#"><img src="./public/img/calculator.png" alt=""><br>Calculator</a>
+                        <a href="#"><img src="./public/img/weather.jpeg" alt="Weather App"><br>Weather App</a>
+                        <p>A simple weather application that displays current weather conditions and forecasts.</p>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./public/img/calculator.png" alt="Calculator"><br>Calculator</a>
                         <p>A basic calculator with addition, subtraction, multiplication, and division operations.</p>
                     </li>
                     <li>
-                        <a href="#"><img src="./public/img/portfolio.jpg" alt=""><br>Portfolio</a>
+                        <a href="#"><img src="./public/img/portfolio.jpg" alt="Portfolio"><br>Portfolio</a>
                         <p>A personal portfolio website to showcase my projects and skills.</p>
                     </li>
-                    <div>
-                        <li>
-                            <a href="#"><img src="./public/img/todoapp.webp" alt=""><br>To do App</a>
-                            <p>A simple to-do list application that allows users to add, edit, and delete tasks.</p>
-                        </li>
-                    </div>
                     <li>
-                        <a href="#"><img src="./public/img/app-security.png" alt=""><br>security App</a>
+                        <a href="#"><img src="./public/img/todoapp.webp" alt="To do App"><br>To do App</a>
+                        <p>A simple to-do list application that allows users to add, edit, and delete tasks.</p>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./public/img/app-security.png" alt="Security App"><br>Security App</a>
                         <p>A simple security application that provides basic protection and monitoring features.</p>
                     </li>
                     <li>
-                        <a href="#"><img src="./public/img/btc.png" alt=""><br>Bitcoin App</a>
+                        <a href="#"><img src="./public/img/btc.png" alt="Bitcoin App"><br>Bitcoin App</a>
                         <p>A simple Bitcoin application that displays current prices and market data.</p>
                     </li>
                 </ul>
             </div>
         </section>
+
         <section id="contact">
             <h2>Contact</h2>
             <form>
                 <input type="text" placeholder="your name">
                 <input type="email" placeholder="your email">
                 <textarea id="mensaje" name="mensaje" rows="4" placeholder="Your message" required></textarea>
-                <button class="input-mensaje" type="submit">Send</button>
+                <button type="submit">Send</button>
             </form>
         </section>
     </main>
@@ -110,6 +115,16 @@
     <footer>
         <p>© 2026 Leonardo Jimenez Dager</p>
     </footer>
+
+    <script>
+        const btn = document.getElementById("hamburger");
+        const nav = document.getElementById("nav");
+
+        btn.addEventListener("click", () => {
+            btn.classList.toggle("open");
+            nav.classList.toggle("open");
+        });
+    </script>
 </body>
 
 </html>
