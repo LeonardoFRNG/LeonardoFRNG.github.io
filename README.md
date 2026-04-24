@@ -25,7 +25,9 @@ Github Repo:
 
 https://github.com/LeonardoFRNG/LeonardoFRNG.github.io.git
 
-website: LeonardoFRNG.github.io
+website: 
+
+LeonardoFRNG.github.io
 
 or you could open "index.html" directly in yout browser, or use a live server extension if you're in VS code.
 
