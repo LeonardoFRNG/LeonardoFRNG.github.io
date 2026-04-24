@@ -6,10 +6,10 @@ This is my personal portflio website, I buil it from scratch using just HTML and
 
 The site has four main sections:
 
-**Welcome** a quick intro with a typing animation of my name.
-**About me** a bit about who I am and what I'm working with
-**Projects** a grid of the things I've built so far\
-**Contact** a simple form to reach out
+-**Welcome**-a quick intro with a typing animation of my name.
+-**About me**-a bit about who I am and what I'm working with
+-**Projects**-a grid of the things I've built so far\
+-**Contact**-a simple form to reach out
 
 There's also a separate page of my pets
 
