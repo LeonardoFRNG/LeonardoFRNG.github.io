@@ -1,0 +1,117 @@
+/* ===== RESPONSIVE: TABLET ===== */
+@media (max-width: 1024px) {
+    .sobre-mi__inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-mi-drch img {
+        left: 0;
+        width: 18rem;
+        height: 18rem;
+    }
+}
+
+/* ===== RESPONSIVE: MOBILE ===== */
+@media (max-width: 768px) {
+
+    nav {
+        gap: 0.8rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #welcome,
+    #about-me,
+    #contact {
+        height: auto;
+        padding: 4rem 1.5rem;
+    }
+
+    #welcome .welcome-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #welcome .sobre-mi-drch {
+        order: 2;
+        display: flex;
+        justify-content: center;
+    }
+
+    #welcome .sobre-mi-izq {
+        order: 1;
+    }
+
+    #welcome .sobre-mi-drch img {
+        width: 16rem;
+        height: 16rem;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+    }
+
+    #contact form {
+        transform: none;
+        left: 0;
+    }
+
+    #welcome::before,
+    #welcome::after,
+    #about-me::before,
+    #about-me::after,
+    #contact::before,
+    #contact::after {
+        width: 150px;
+        height: 150px;
+        top: -50px;
+        opacity: 0.3;
+    }
+
+    #welcome::before,
+    #about-me::before,
+    #contact::before { left: -50px; }
+
+    #welcome::after,
+    #about-me::after,
+    #contact::after  { right: -50px; }
+
+    .sobre-mi-titulo {
+        font-size: 2rem;
+    }
+
+    #about-me .sobre-mi__inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about-me .sobre-mi-drch {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    #about-me .sobre-mi-drch .tag {
+        flex: 0 0 auto;
+    }
+
+    .hamburger { display: flex; }
+
+    #nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: var(--color-fondo-secundario);
+        padding: 1rem 2rem;
+        gap: 1rem;
+    }
+
+    #nav.open { display: flex; }
+}
