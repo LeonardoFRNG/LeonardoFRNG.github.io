@@ -8,21 +8,28 @@
     <link rel="stylesheet" href="./src/css/style.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts — using preconnect above to speed up font loading -->
     <link
         href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=DM+Serif+Display:ital@0;1&family=Doto:wght@100..900&family=DynaPuff:wght@400..700&family=Instrument+Serif:ital@0;1&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Petit+Formal+Script&family=Shadows+Into+Light+Two&family=Story+Script&family=Tiny5&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-  
+
+    <!-- this is the header / navbar -->
+    <!-- Stays at the top of the page; contains the logo and navigation links -->
     <header class="inicio">
         <h1 class="logo-texto">LJ</h1>
+
+        <!-- Main nav — links scroll to sections by ID, except the Pets page which is a separate HTML file -->
         <nav id="nav">
             <a href="#about-me" class="tag">About me</a>
             <a href="#proyects" class="tag">Projects</a>
             <a href="#contact" class="tag">Contact</a>
             <a href="./src/views/pets.html" class="tag">Pets</a>
         </nav>
+
+        <!-- Hamburger button — only visible on mobile; toggled via JS at the bottom -->
         <button class="hamburger" id="hamburger">
             <span></span><span></span><span></span>
         </button>
@@ -30,6 +37,8 @@
 
     <main>
 
+        <!-- this is the hero / welcome section -->
+        <!-- First thing visitors see — name, short tagline, and a photo -->
         <section id="welcome">
             <div class="welcome-inner">
                 <div class="sobre-mi-izq">
@@ -38,13 +47,15 @@
                     </h2>
                     <p class="sobre-mi-text">A Software developer and a designer of great ideas, improving everyday!</p>
                 </div>
+
                 <div class="sobre-mi-drch">
                     <img src="./public/img/leoselfie.jpeg" alt="Leonardo Jimenez">
                 </div>
             </div>
         </section>
 
-   
+        <!-- this is the about me section -->
+        <!-- A bit more detail about who Leo is, plus a skill tag list on the right -->
         <section id="about-me">
             <div class="sobre-mi__inner">
                 <div class="sobre-mi-izq">
@@ -58,6 +69,8 @@
                         distinctio impedit? Eveniet, harum!
                     </p>
                 </div>
+
+                <!-- Tech stack tags — add or remove spans here as your skills grow -->
                 <div class="sobre-mi-drch">
                     <span class="tag">HTML5</span>
                     <span class="tag">CSS3</span>
@@ -68,12 +81,16 @@
             </div>
         </section>
 
+        <!-- this is the projects section -->
+        <!-- Grid of project cards — each card has an image, title link, and short description -->
         <section id="proyects">
             <div class="proyectos-grid">
                 <h2>Projects</h2>
-             
+
+                <!-- Add new <li> blocks here whenever you finish a new project -->
                 <ul class="projects-grid">
                     <li>
+                        <!-- Replace href="#" with the actual live URL or repo link when ready -->
                         <a href="#"><img src="./public/img/weather.jpeg" alt="Weather App"><br>Weather App</a>
                         <p>A simple weather application that displays current weather conditions and forecasts.</p>
                     </li>
@@ -101,6 +118,8 @@
             </div>
         </section>
 
+        <!-- this is the contact section -->
+        <!-- Simple contact form — hook this up to a backend or a service like Formspree when you're ready to go live -->
         <section id="contact">
             <h2>Contact</h2>
             <form>
@@ -110,12 +129,16 @@
                 <button type="submit">Send</button>
             </form>
         </section>
+
     </main>
 
     <footer>
         <p>© 2026 Leonardo Jimenez Dager</p>
     </footer>
 
+    <!-- this is for the mobile navigation toggle -->
+    <!-- Grabs the hamburger button and the nav, then toggles an "open" class on both when clicked.
+         The actual show/hide animation is handled in CSS — this just flips the class. -->
     <script>
         const btn = document.getElementById("hamburger");
         const nav = document.getElementById("nav");
@@ -125,6 +148,7 @@
             nav.classList.toggle("open");
         });
     </script>
+
 </body>
 
 </html>
