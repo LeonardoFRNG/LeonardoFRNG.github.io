@@ -34,14 +34,7 @@ or you could open "index.html" directly in yout browser, or use a live server ex
 ## Folder structure
 
 
-├── index.html
-├── public/
-│   └── img/          
-└── src/
-    ├── css/
-    │   └── styles.css
-    └── views/
-        └── pets.html
+![Folder structure](./public/img/estructure.jpeg)
 
 ## Responsive
 
